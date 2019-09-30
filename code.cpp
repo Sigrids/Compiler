@@ -2,7 +2,6 @@
 #include "code.h"
 #include "tree.h"
 #include "scope.h"
-//#include "scope.cpp"
 
 int findS(std::vector<std::string> varStack, std::string str)
 {
