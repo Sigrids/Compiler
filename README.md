@@ -4,21 +4,37 @@ translating a low level language with local scope into assembly language.
 Low level language
 BNF
 <program>  ->      <vars> <block>
+  
 <block>    ->      void <vars> <stats> return
+  
 <vars>     ->      empty | var Identifier : Integer <vars>
+  
 <expr>     ->      <A> + <expr> | <A> - <expr> | <A>
+  
 <A>        ->      <N> / <A> | <N>
+  
 <N>        ->      <M> * <N> | <M>
+  
 <M>        ->      % <M> |  <R>
+  
 <R>        ->      ( <expr> ) | Identifier | Integer
+  
 <stats>    ->      <stat> ; <mStat>
+  
 <mStat>    ->      empty |  <stat>  ;  <mStat>
+  
 <stat>     ->      <in> | <out> | <block> | <if> | <loop> | <assign>
+  
 <in>       ->      scan  Identifier
+  
 <out>      ->      print <expr>
+  
 <if>       ->      cond [ <expr> <RO> <expr> ] <stat>
+  
 <loop>     ->      iter [ <expr> <RO> <expr> ] <stat>
+  
 <assign>   ->      Identifier  = <expr> 
+  
 <RO>       ->      < | = <  | >  | = > | < >   |   =   
   
 ## Project definition
